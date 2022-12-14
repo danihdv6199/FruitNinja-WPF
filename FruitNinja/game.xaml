@@ -1,0 +1,31 @@
+﻿<Window x:Class="trabajo.game"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:trabajo"
+        mc:Ignorable="d"
+        Title="game" Height="753" Width="1112" Closed="Window_Closed" MouseEnter="Window_MouseEnter" ResizeMode="CanMinimize">
+    <Window.Background>
+        <ImageBrush ImageSource="Material/fondo2.png"></ImageBrush>
+
+    </Window.Background>
+
+    <Canvas Name="Lienzo" Grid.ColumnSpan="4" MouseLeftButtonDown="Lienzo_MouseLeftButtonDown" Grid.RowSpan="2" ScrollViewer.VerticalScrollBarVisibility="Disabled" RenderTransformOrigin="0.5,0.5">
+
+        <Button Name="CrearFigura"  Background="Transparent" Click="CrearFigura_Click" Canvas.Left="104" Canvas.Top="21" Width="65" Height="68" BorderThickness="0" Padding="0">
+            <Image  Source="Material/AñadirBoton.png" Height="68" Width="60" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Center"></Image>
+        </Button>
+        <Button Name="Animar"  Grid.Column="1" Click="Animar_Click" Background="Transparent" Canvas.Left="32" Canvas.Top="21" Padding="0" BorderThickness="0">
+            <Image  Source="Material/PlayBoton.png" Height="66" Width="64" RenderTransformOrigin="0.682,1.5"></Image>
+        </Button>
+        <Button Name="EliminarUltimo"  Background="Transparent" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" Click="EliminarUltimo_Click" Height="68" Grid.ColumnSpan="2" Canvas.Left="174" Canvas.Top="21" Width="56" Padding="0" ScrollViewer.VerticalScrollBarVisibility="Disabled" BorderThickness="0">
+            <Image  Source="Material/RemoveBoton.png" Height="64" Width="56" HorizontalAlignment="Center" VerticalAlignment="Center"></Image>
+        </Button>
+        <Label Name="LabelContador" Content="" Canvas.Left="985" Canvas.Top="10" RenderTransformOrigin="0.737,1.192" Width="70" FontSize="48" FontWeight="Bold" FontStretch="UltraCondensed" FontFamily="Tw Cen MT Condensed Extra Bold" Foreground="#FF0C3FF0" Height="56"/>
+        <Label Name="LabelBombas" Content="" Canvas.Left="985" Canvas.Top="133" Height="46" Width="117" FontSize="30" FontWeight="Bold" Background="#00000000" Foreground="Red"/>
+        <Label Name="LabelPuntuacion" Content="" Canvas.Left="985" Canvas.Top="71" Height="62" Width="107" Foreground="#FF46FF00" FontSize="36"/>
+
+    </Canvas>
+
+</Window>

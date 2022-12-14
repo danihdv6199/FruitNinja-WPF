@@ -1,0 +1,24 @@
+﻿<Window x:Class="trabajo.options"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:trabajo"
+        mc:Ignorable="d"
+        Title="options" Height="441" Width="657" Closed="Window_Closed" ResizeMode="CanMinimize">
+    <Grid Background="#FFCFC9C9">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="368*"/>
+            <RowDefinition Height="51*"/>
+        </Grid.RowDefinitions>
+        <DataGrid Name="DataGrid" AutoGenerateColumns="False" SelectionMode="Single" CanUserDeleteRows="False" CanUserAddRows="False" Height="362" VerticalAlignment="Top" Width="651" Background="#FFC9A8A8">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Tipo Figura" Width="3*" Binding="{Binding Mode=OneWay, Path=Name, UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="Velocidad x" Width="3*" Binding="{Binding Mode=TwoWay, Path=velX, UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="Velocidad Y" Width="3*" Binding="{Binding Mode=TwoWay, Path=velY, UpdateSourceTrigger=PropertyChanged}"/>
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="EliminarFigura" Grid.Row="1" Content = "Eliminar" Click="EliminarFigura_Click" Height="30" Margin="281,10,276,10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="94" Background="#FF8594B6"/>
+    </Grid>
+</Window>
